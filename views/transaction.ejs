@@ -1,0 +1,34 @@
+<%- include( './tools.ejs' ); %>
+
+    <body>
+        <div class="container px-4 py-5" id="hanging-icons">
+            <h2 class="pb-2 border-bottom">Transaction Menu</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+                <div class="col d-flex align-items-start">
+                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                    </div>
+                    <div>
+                        <form action="/transfermenu" method="post">
+                            <h2>Transfer Menu</h2>
+                            <p>List your transfer here!.</p>
+                            <button type="submit" class="btn btn-success"> Transfer </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+                    </div>
+                    <div>
+                        <form action="/recievemenu" method="post">
+                            <h2>Recieve Menu</h2>
+                            <p>List your Recieve here!.</p>
+                            <button type="submit " class="btn btn-primary "> Recieve</button>
+                        </form>
+                    </div>
+                </div </div>
+            </div>
+    </body>
+
+    </html>

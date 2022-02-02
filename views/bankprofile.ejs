@@ -1,0 +1,60 @@
+<%- include( './tools.ejs' ); %>
+
+    <body>
+        <div class="container px-4 py-5" id="hanging-icons">
+            <h2 class="pb-2 border-bottom">Menu</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+                <div class="col d-flex align-items-start">
+                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                    </div>
+                    <div>
+                        <h2>Create Account</h2>
+                        <p>Create new account here!.</p>
+                        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
+                    Create Account
+                  </a>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+                    </div>
+                    <div>
+                        <form action="/myaccount" method="get">
+                            <h2>Manage Your Account</h2>
+                            <p>You can delete,manage,edit your account here!.</p>
+                            <a href="/myaccount" type="submit" class="btn btn-primary"> Your Account</a>
+                        </form>
+                    </div>
+                </div </div>
+            </div>
+            <div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Create Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="/createaccount">
+                                <div class="mb-3">
+                                    <label class="form-label">Your Account Name</label>
+                                    <input type="name" name="account_name" class="form-control" placeholder="name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">email</label>
+                                    <input type="email" name="email" class="form-control" value="<%= name %>">
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-success">Create!</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </body>
+
+    </html>
